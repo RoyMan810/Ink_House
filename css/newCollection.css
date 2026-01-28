@@ -1,5 +1,6 @@
 .newCollection {
   display: grid;
+  --content-height: 0px;
 }
 .newCollection__img,
 .newCollection__content {
@@ -28,6 +29,7 @@
 }
 .newCollectionContent {
   --size: 80px;
+  height: var(--content-height);
   color: #f4f6f5;
   max-width: calc(1110px + var(--main-padding));
 }

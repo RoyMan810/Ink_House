@@ -1,22 +1,22 @@
 function syncNewCollectionHeight() {
-  const imgBlock = document.querySelector('.newCollection__img img');
   const contentBlock = document.querySelector('.newCollectionContent');
+  const imgBlock = document.querySelector('.newCollection__img img');
   
-  // ждём полного рендера
-  requestAnimationFrame(() => {
-    const contentHeight = contentBlock.offsetHeight;
-    
-    // задаём высоту картинке напрямую
-    imgBlock.style.height = contentHeight + 'px';
-    imgBlock.style.objectFit = 'cover';
-  });
+  if (!contentBlock || !imgBlock) return;
+  
+  const contentScrollHeight = contentBlock.scrollHeight;
+  const computedStyle = window.getComputedStyle(contentBlock);
+  const paddingBottom = parseFloat(computedStyle.paddingBottom);
+  const fullHeight = contentScrollHeight + paddingBottom;
+  
+  imgBlock.style.height = fullHeight + 'px';
+  imgBlock.style.objectFit = 'cover';
 }
 
-// с задержкой, чтобы стили точно применились
-function initHeightSync() {
-  setTimeout(syncNewCollectionHeight, 100);
+// запуск после загрузки и при ресайзе
+if (document.readyState === 'loading') {
+  window.addEventListener('load', syncNewCollectionHeight);
+} else {
+  syncNewCollectionHeight();
 }
-
-// запускаем
-window.addEventListener('load', initHeightSync);
 window.addEventListener('resize', syncNewCollectionHeight);
