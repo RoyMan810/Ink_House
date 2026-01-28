@@ -32,7 +32,6 @@ html {
   line-height: 1.5;
   /* Prevent the browser from synthesizing missing typefaces */
   font-synthesis: none;
-  font-smooth: always;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
   /* Prevent mobile browsers increasing font-size */

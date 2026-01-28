@@ -1,0 +1,61 @@
+.newCollection {
+  display: grid;
+}
+.newCollection__img,
+.newCollection__content {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.newCollection__img {
+  position: relative;
+}
+.newCollection__img img {
+  transform: scaleX(-1);
+  object-fit: cover;
+}
+.newCollection__img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #000000 0%, #00000000 100%);
+  pointer-events: none;
+}
+
+.newCollection__content {
+  z-index: 100;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+.newCollectionContent {
+  --size: 80px;
+  color: #f4f6f5;
+  max-width: calc(1110px + var(--main-padding));
+}
+.newCollectionContent__title {
+  position: relative;
+  font-size: 4rem;
+  max-width: 50%;
+  margin-left: calc(var(--size) + 2rem);
+  margin-bottom: 3rem;
+}
+.newCollectionContent__title::before {
+  content: url(../img/Star.png);
+  position: absolute;
+  height: var(--size);
+  width: var(--size);
+  top: 25%;
+  left: calc(-1 * (var(--size) + 2rem));
+  transform: translateY(-25%);
+}
+.newCollectionContent__desc {
+  font-size: 1.8rem;
+  max-width: calc(50% + var(--size) + 2rem);
+  margin-bottom: 6rem;
+}
+.newCollectionContent__btn {
+  display: inline-block;
+  background-color: #eedb6d;
+  color: #2c2d35;
+  font-size: 2rem;
+  padding: 2rem 6rem;
+}
