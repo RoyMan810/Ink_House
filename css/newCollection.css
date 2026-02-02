@@ -12,7 +12,6 @@
 }
 .newCollection__img img {
   transform: scaleX(-1);
-  object-fit: cover;
 }
 .newCollection__img::after {
   content: "";
