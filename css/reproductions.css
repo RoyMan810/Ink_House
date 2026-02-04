@@ -72,3 +72,6 @@
 .card__btn {
   padding: 1.5rem 0;
 }
+.card__img {
+  overflow: hidden;
+}

@@ -9,9 +9,9 @@
 
 .newCollection__img {
   position: relative;
-}
-.newCollection__img img {
-  transform: scaleX(-1);
+  background-image: url(../img/bg-newCollection.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .newCollection__img::after {
   content: "";

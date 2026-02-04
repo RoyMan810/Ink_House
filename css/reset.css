@@ -21,15 +21,11 @@
 }
 
 html {
-  /* Allow percentage-based heights */
-  /* Setting width: 100% isn't required because it is a default for block-level elements (html and body are block level) */
-  height: 100%;
-
   /* Sets font-size to 10px. 
   Percent units are used to ensure font will scale if user has a custom font-size browser setting (for ally).
   Using 10px as the base to make it easy to set font sizes in elements. Example: for 16px, use 1.6rem, for 32px, use 3.2rem, ...  */
   font-size: calc(100% / 16 * 10);
-  line-height: 1.5;
+  line-height: 1;
   /* Prevent the browser from synthesizing missing typefaces */
   font-synthesis: none;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -43,8 +39,6 @@ html {
 }
 
 body {
-  height: 100%;
-
   /* Prevent the rubber band effect when the user scrolls to the top or bottom of the page (WebKit only) */
   overscroll-behavior: none;
 

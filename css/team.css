@@ -1,0 +1,27 @@
+.team {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  max-width: 1110px;
+}
+.team__content {
+  flex-basis: 50%;
+}
+
+.teamContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+.teamContent__title {
+  font-size: 4rem;
+}
+.teamContent__description {
+  font-size: 1.8rem;
+}
+.teamContent__person {
+  display: flex;
+  gap: 3rem;
+  max-height: 8rem;
+}
